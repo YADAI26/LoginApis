@@ -155,7 +155,14 @@ agregarPersonaje() {
 <img width="1905" height="637" alt="image" src="https://github.com/user-attachments/assets/5cfb6cb8-7231-41f2-9253-ba8708fa6f17" />
 
 ### 👾 Interfaz de Personajes
-<img width="1905" height="974" alt="image" src="https://github.com/user-attachments/assets/7de93cba-8c9f-446f-9bf8-3d36ac559e65" />
+<img width="1001" height="761" alt="image" src="https://github.com/user-attachments/assets/4857305d-d420-4653-8fe2-3d47531070a2" /> 
+
+ boton pata añadir personaje
+ 
+<img width="391" height="321" alt="image" src="https://github.com/user-attachments/assets/faa0befe-7c30-4059-8698-e771bb83f7c3" />
+
+Personaje añadido
+<img width="819" height="193" alt="image" src="https://github.com/user-attachments/assets/17b1ee8f-c039-449c-9bf6-d98b89b0fbf2" />
 
 ---
 
