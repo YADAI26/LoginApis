@@ -112,14 +112,8 @@ Puedes usar los siguientes datos reales desde la API de usuarios:
 **Usuario:** `davrangylyjowfddv@gmail.com`  
 **Contraseña:** `2004dd`
 
----
 
-## 🌐 Demo
 
-GitHub Pages:  
-👉 [Login App en GitHub Pages](https://yadai26.github.io/LoginApis/login)
-
----
 
 
 ---
