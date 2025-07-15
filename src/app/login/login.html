@@ -1,0 +1,21 @@
+<div class="login-container">
+  <h2>Iniciar sesión</h2>
+
+  <input type="email" [(ngModel)]="email" placeholder="Correo electrónico" required />
+
+  <div class="password-field">
+    <input
+      [type]="hidePassword ? 'password' : 'text'"
+      [(ngModel)]="password"
+      placeholder="Contraseña"
+      required
+    />
+    <button type="button" (click)="hidePassword = !hidePassword" aria-label="Mostrar u ocultar contraseña">
+      {{ hidePassword ? '👁️' : '🙈' }}
+    </button>
+  </div>
+
+  <button (click)="login()" type="submit" class="login-btn">Iniciar sesión</button>
+
+  <p *ngIf="error" class="error">{{ error }}</p>
+</div>

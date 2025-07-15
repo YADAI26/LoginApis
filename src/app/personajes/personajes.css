@@ -1,0 +1,238 @@
+.rick-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.table-wrapper {
+  background: rgba(173, 255, 152, 0.94);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 20px;
+}
+
+.personajes-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.personajes-table th,
+.personajes-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.personajes-table th {
+  background-color: #d3def570;
+  color: rgba(0, 0, 0, 0.847);
+  font-weight: bold;
+}
+
+.personaje-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.action-btn {
+  padding: 6px 12px;
+  margin: 0 4px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: #97ce4c;
+  color: white;
+}
+
+.action-btn:hover {
+  background-color: #86b743;
+  transform: translateY(-1px);
+}
+
+/* Estilos para la paginación */
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.pagination {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.page-button {
+  padding: 6px 12px;
+  border: 1px solid #ddd;
+  background: white;
+  border-radius: 4px;
+  cursor: pointer;
+  min-width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.page-button:disabled {
+  background: #f5f5f5;
+  cursor: not-allowed;
+  color: #999;
+}
+
+.page-button.active {
+  background: #97ce4c;
+  color: white;
+  border-color: #97ce4c;
+}
+
+.page-button:hover:not(:disabled):not(.active) {
+  background: #f0f0f0;
+  transform: translateY(-1px);
+}
+
+/* Estilos para el modal */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  min-width: 400px;
+  max-width: 600px;
+  position: relative;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+.modal .personaje-avatar {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  margin: 35px auto;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.modal h3 {
+  font-size: 24px;
+  margin-top: 0;
+  color: #333;
+  border-bottom: 2px solid #97ce4c;
+  padding-bottom: 15px;
+}
+
+.modal p {
+  margin: 15px 0;
+  font-size: 18px;
+  text-align: left;
+  padding: 0 20px;
+}
+
+.modal input {
+  width: 100%;
+  padding: 12px;
+  margin: 12px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.modal button {
+  padding: 10px 20px;
+  margin-top: 15px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #97ce4c;
+  color: white;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.modal button:hover {
+  background-color: #86b743;
+  transform: translateY(-1px);
+}
+
+/* Estilos para la barra de búsqueda */
+.search-input {
+  width: 100%;
+  max-width: 300px;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #97ce4c;
+  box-shadow: 0 0 0 3px rgba(151, 206, 76, 0.2);
+}
+
+/* Estilos para el navbar */
+.navbar {
+  background: #97ce4c;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.brand {
+  color: white;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.nav-right {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-right a,
+.nav-right button {
+  color: white;
+  text-decoration: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.nav-right a:hover,
+.nav-right button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
+}
+
+.nav-right button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}

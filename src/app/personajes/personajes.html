@@ -1,0 +1,88 @@
+<div class="navbar">
+  <span class="brand">Mi App</span>
+  <div class="nav-right">
+    <a routerLink="/usuarios">Mi usuario</a>
+    <a routerLink="/personajes">Personajes</a>
+    <button (click)="logout()">Cerrar sesión</button>
+  </div>
+</div>
+<div class="rick-container">
+  <h2>Personajes de Rick and Morty</h2>
+  <input
+    type="text"
+    [(ngModel)]="searchTerm"
+    (ngModelChange)="onSearchChange()"
+    placeholder="Buscar personaje o estado..."
+    class="search-input"
+    style="margin-bottom: 18px; padding: 8px 14px; border-radius: 8px; border: 1px solid #baf7c4; width: 60%; max-width: 320px; font-size: 1rem;"
+  />
+  <div class="table-wrapper">
+    <table class="personajes-table">
+      <thead>
+        <tr>
+          <th>Avatar</th>
+          <th>Nombre</th>
+          <th>Estado</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let personaje of personajesPaginados; let i = index">
+          <td>
+            <img class="personaje-avatar" [src]="personaje.image" [alt]="personaje.name">
+          </td>
+          <td>{{ personaje.name }}</td>
+          <td>{{ personaje.status }}</td>
+          <td>
+            <button class="action-btn" (click)="openModal('ver', personaje, i + (paginaActual-1)*porPagina)">Ver más</button>
+            <button class="action-btn" (click)="openModal('editar', personaje, i + (paginaActual-1)*porPagina)">Editar</button>
+            <button class="action-btn" (click)="eliminarPersonaje(i + (paginaActual-1)*porPagina)">Eliminar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <!-- Paginación -->
+        <!-- Paginación -->
+    <div class="pagination-container" *ngIf="paginas.length > 1">
+      <div class="pagination">
+        <button 
+          class="page-button"
+          [disabled]="paginaActual === 1" 
+          (click)="cambiarPagina(paginaActual - 1)">
+          &laquo;
+        </button>
+        <button 
+          *ngFor="let p of paginas"
+          class="page-button"
+          [class.active]="p === paginaActual"
+          (click)="cambiarPagina(p)">
+          {{p}}
+        </button>
+        <button
+          class="page-button"
+          [disabled]="paginaActual === paginas.length"
+          (click)="cambiarPagina(paginaActual + 1)">
+          &raquo;
+        </button>
+      </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal-backdrop" *ngIf="modalAbierto">
+      <div class="modal modal-lg">
+        <h3 *ngIf="modalTipo === 'ver'">Detalles del personaje</h3>
+        <h3 *ngIf="modalTipo === 'editar'">Editar personaje</h3>
+        <div *ngIf="modalTipo === 'ver'">
+          <p><b>Nombre:</b> {{ personajeModal?.name }}</p>
+          <p><b>Estado:</b> {{ personajeModal?.status }}</p>
+          <img class="personaje-avatar" [src]="personajeModal?.image" [alt]="personajeModal?.name" style="width:100px; margin:10px auto; display:block;">
+        </div>
+        <div *ngIf="modalTipo === 'editar'">
+          <label>Nombre:<br><input [(ngModel)]="personajeEdit.name"></label><br>
+          <label>Estado:<br><input [(ngModel)]="personajeEdit.status"></label><br>
+        </div>
+        <button (click)="cerrarModal()">Cerrar</button>
+        <button *ngIf="modalTipo === 'editar'" (click)="guardarEdicion()">Guardar</button>
+      </div>
+    </div>
+  </div>
+</div>

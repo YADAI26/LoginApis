@@ -1,0 +1,37 @@
+<!-- Barra de navegación superior -->
+<div class="navbar">
+  <span class="brand">Mi App</span>
+  <div class="nav-right">
+    <a routerLink="/usuarios">Mi usuario</a>
+    <a routerLink="/personajes">Personajes</a>
+    <button (click)="logout()">Cerrar sesión</button>
+  </div>
+</div>
+
+<!-- Contenedor del usuario -->
+<div class="usuarios-container">
+  <h1>Bienvenido, {{ user?.name }}</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Avatar</th>
+        <th>Nombre</th>
+        <th>Email</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngIf="user">
+        <td><img class="avatar" [src]="user.avatar" [alt]="user.name"></td>
+        <td>{{ user.name }}</td>
+        <td>{{ user.email }}</td>
+        
+      </tr>
+      <tr *ngIf="!user">
+        <td colspan="3" style="text-align:center; color:#888;">No hay usuarios registrados</td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>
