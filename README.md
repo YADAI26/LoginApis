@@ -22,3 +22,11 @@ Oaxaca, Oaxaca, a 14 de julio de 2025.
 ---
 
 # AngularLoginapis
+USER
+davrangylyjowfddv@gmail.com
+PS:
+2004dd
+
+GitHub Pages:
+
+https://yadai26.github.io/LoginApis/login
