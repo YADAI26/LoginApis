@@ -173,11 +173,10 @@ Personaje añadido
 
 ---
 
-## 🌐 GitHub Pages
+## Colabore con
 
 Puedes probar la app aquí:  
-👉 [https://yadai26.github.io/LoginApis/login](https://yadai26.github.io/LoginApis/login)
-
+https://github.com/David-EduardoLC
 ---
 
 
